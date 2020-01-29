@@ -5,6 +5,6 @@
 for _F in run_build run_serve run_setup_links Makefile
 do
 	_F=${_F#*/}
-	echo "### ${_F}-----------------------------------------------------"
+	printf "%-16s %s\n" "${_F}" "-----------------------------------------------------"
 	diff $_F TMP/$_F
 done
