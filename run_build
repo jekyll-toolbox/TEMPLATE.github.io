@@ -217,8 +217,8 @@ do
 	LOG 3 "TITLE" "$_TITLE"
 	LOG 3 "STEP"  "$_STEP"
 
-	ADD "- title:"		"\"$_TITLE\""
-	ADD "  subtitle:"	"\"$_SUBTITLE\""
+	ADD "- title:"		"\"${_TITLE^}\""
+	ADD "  subtitle:"	"\"${_SUBTITLE^}\""
 	ADD "  text:"		"\"$_TEXT\""
 	ADD "  link:"		"\"$_LINK\""
 	ADD "  lang:"		"\"$_LANG\""
@@ -227,6 +227,6 @@ do
 	ADD "  category:"	"\"${_CATEGORY}\""
 	ADD "  step:"		"\"${_STEP}\""
 	echo ""
-	echo "#"
+	echo "##"
 
-done | grep -v -E '^#' | cat > _data/repositories.yml
+done | grep -v -E '^# ' | cat > _data/repositories.yml
