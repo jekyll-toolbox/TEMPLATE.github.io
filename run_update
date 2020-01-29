@@ -2,7 +2,7 @@
 
 rm -rf TMP
 git clone -q git@github.com:jekyll-toolbox/TEMPLATE.github.io.git TMP
-for _F in run_build run_serve run_setup_links
+for _F in run_build run_serve run_setup_links Makefile
 do
 	echo "### ${_F}-----------------------------------------------------"
 	diff $_F TMP/$_F
