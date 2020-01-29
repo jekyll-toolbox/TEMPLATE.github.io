@@ -1,16 +1,19 @@
 default:
 	@grep ":\s+#"
 
-build:
+build:		# Build 
 	./run_build
 
-serve:
+serve:		# serve and watch
 	jekyll serve --watch --incremental
 
-deploy:
+deploy:		# deloy to github
 	git add -A
 	git commit -m "change: update"
 	git push
 
-run: serve
+run: serve	# run
 	#
+
+update:		# pdate from template
+	./run_update
