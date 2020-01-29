@@ -1,7 +1,7 @@
 default:
 	@grep ":\s+#"
 
-build:		# Build 
+build:		# Build
 	./run_build
 
 serve:		# serve and watch
