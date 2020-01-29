@@ -1,0 +1,31 @@
+# Site
+name: 'Jekyll Toolbox'
+title: 'Jekyll Toolbox'
+description: 'Jekyll Toolbox - Tips, Tricks, Samples and more'
+baseurl: '/'
+url: 'https://jekyll-toolbox.github.io'
+url_noprotocol: {{ site.url | replace: 'http://', '//'}}
+
+include: ["_pages"]
+#permalink: /:title/
+
+#plugins:
+#  - jekyll-feed
+#  - jekyll-sitemap
+#  - jekyll-paginate
+#  - jekyll-seo-tag
+
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Pagination
+#paginate: 20
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+
+#
+sass:
+    sass_dir: /assets/css
+    style:    compressed
