@@ -169,6 +169,7 @@ do
 
 	LOG 3 "check image" "$_IMAGE1 or $_IMAGE2"
 
+
 	_RESULT="$(
 				find $_FLDR_GIT $_FLDR_IMG  -name "$_IMAGE1"					\
 										-o  -name "$_IMAGE2"					\
@@ -176,9 +177,10 @@ do
 										-o  -name "${IMAGE_PREFIX}$_IMAGE2" 	| head -1
 	)"
 
-	if [[ "_RESULT" != "" ]]; then
+	if [[ "$_RESULT" != "" ]]; then
 		_IMAGE="${_RESULT##*/}"
 
+		LOG 3 "COPY"  "$_RESULT $_FLDR_IMG/$_IMAGE"
 		cp "$_RESULT" "$_FLDR_IMG/$_IMAGE"
 	fi
 
