@@ -19,3 +19,6 @@ update:		# pdate from template
 	@rm -rf TMP
 	@git clone -q git@github.com:jekyll-toolbox/TEMPLATE.github.io.git TMP
 	@TMP/run_update_check
+
+check: update
+	#
