@@ -1,2 +1,5 @@
 TMP
 _data
+
+.env/
+.envrc

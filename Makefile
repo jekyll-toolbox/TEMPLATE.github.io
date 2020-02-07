@@ -1,5 +1,5 @@
 default:
-	@grep ":\s+#"
+	grep -E ":\s+#" Makefile
 
 build:		# Build
 	@./run_build
